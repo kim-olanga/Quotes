@@ -7,4 +7,6 @@
     </div>
 </div> -->
 
-<p>hello world</p>
+<ul *ngFor="let quote of quotes">
+    <li>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span class="text-warning">{{quote.downvote}}</span></li>
+</ul>
