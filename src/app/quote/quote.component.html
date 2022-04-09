@@ -1,12 +1,23 @@
+<ul *ngFor="let quote of quotes">
+    <li>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span class="text-warning">{{quote.downvote}}</span></li>
+    <li>{{quote.author}}</li>
+    <li>{{quote.name}}</li>
+</ul>
+
 <!-- <div class="container">
-    <h1>Quotes</h1>
-    <div class="row mt-md-5 pt-4">
-        <div class="col-md-6"> -->
-            <!-- <div *ngFor="let quote of quotes;let i = index"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor="let quote of quotes;let i = index">
+                <h6 id={{i}} appStrikethrough>{{quote.quote}} registered by {{quote.name}}</h6>
+                <button (click)="toggleDetails(i)" class="btn btn-primary">Toggle <Details></Details></button>
+            </div>
+
+            <div *ngIf="quotes.showDescription">
+                <app-quote [quote]="quote" (isComplete)="deleteQuote($event,i)"></app-quote>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <app-quote-form></app-quote-form>
         </div>
     </div>
 </div> -->
-
-<ul *ngFor="let quote of quotes">
-    <li>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span class="text-warning">{{quote.downvote}}</span></li>
-</ul>
