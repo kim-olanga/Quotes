@@ -15,6 +15,13 @@ export class QuoteComponent implements OnInit {
     new Quote(5, 'It is what it is', 0, 0, 'Nairobian Slogan', 'Meme')
   ]
 
+  arr:number[] = this.quotes.map((quote)=> quote.upvote)
+  highest = Math.max(...this.arr)
+
+  toggleDetails(index: string){
+    this.quotes[String].showDescription = !this.quotes[String].showAuthor;
+  };
+
   constructor() { }
 
   ngOnInit(): void {
