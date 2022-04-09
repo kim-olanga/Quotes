@@ -18,8 +18,8 @@ export class QuoteComponent implements OnInit {
   arr:number[] = this.quotes.map((quote)=> quote.upvote)
   highest = Math.max(...this.arr)
 
-  toggleDetails(index: string){
-    this.quotes[String].showDescription = !this.quotes[String].showAuthor;
+  toggleDetails(index: number){
+    this.quotes[index].author = !this.quotes[index].author;
   };
 
   constructor() { }
