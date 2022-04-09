@@ -42,6 +42,7 @@
                  <p>Name is required</p>
             </div>
         </div>   
-        <button type="submit" class="btn btn-success">Add Quote</button>    
+        <button type="submit" class="btn btn-success">Add Quote</button>  
+        <form (ngSubmit)="submitQuote()" #quoteForm="ngForm"></form>  
     </form>
 </div>
