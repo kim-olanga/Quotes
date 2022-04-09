@@ -2,8 +2,10 @@
     <li>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span class="text-warning">{{quote.downvote}}</span></li>
     <li>{{quote.author}}</li>
     <li>{{quote.name}}</li>
-</ul>
+    <app-quote-detail [quote]='quote'></app-quote-detail>
 
+</ul>
+   
 <!-- <div class="container">
     <div class="row">
         <div class="col-md-6">

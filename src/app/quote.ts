@@ -12,5 +12,6 @@ export class Quote {
         this.downvote = downvote;
         this.author = author;
         this.name = name;
+          
     }
 }
