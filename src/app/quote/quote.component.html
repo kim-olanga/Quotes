@@ -1,23 +1,25 @@
-<ul *ngFor="let quote of quotes">
-    <div *ngIf="quote.upvote == highest; then highlight else empty"></div>
-        <ng-template #highlight>
-            <li appHighlight>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span
-                    class="text-warning">{{quote.downvote}}</span></li>
-            <li>{{quote.author}}</li>
-            <li>{{quote.name}}</li>
-        </ng-template>
-        <ng-template #empty>
-            <li>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span
-                    class="text-warning">{{quote.downvote}}</span></li>
-            <li>{{quote.author}}</li>
-            <li>{{quote.name}}</li>
-        </ng-template>
-
-    <app-quote-detail [quote]='quote'></app-quote-detail>
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-
-
-</ul>
+<div>
+    <ul *ngFor="let quote of quotes">
+        <div *ngIf="quote.upvote == highest; then highlight else empty"></div>
+            <ng-template #highlight>
+                <li appHighlight>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span
+                        class="text-warning">{{quote.downvote}}</span></li>
+                <li>{{quote.author}}</li>
+                <li>{{quote.name}}</li>
+            </ng-template>
+            <ng-template #empty>
+                <li>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span
+                        class="text-warning">{{quote.downvote}}</span></li>
+                <li>{{quote.author}}</li>
+                <li>{{quote.name}}</li>
+            </ng-template>
+    
+        <app-quote-detail [quote]='quote'></app-quote-detail>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    
+    
+    </ul>
+</div>
 
 <!-- <div class="container">
     <div class="row">
