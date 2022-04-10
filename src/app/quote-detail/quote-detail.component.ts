@@ -9,7 +9,11 @@ import { Quote } from '../quote';
 export class QuoteDetailComponent implements OnInit {
 
   @Input()quote!: Quote;
-  // @Output()
+  @Output() isRead = new EventEmitter<boolean>();
+
+  deleteQuote(read: boolean){
+    this.isRead.emit(read);
+  }
   constructor() { }
 
   ngOnInit(): void {

@@ -11,6 +11,7 @@ import { HighlightDirective } from './highlight.directive';
 import { VoteDirective } from './vote.directive';
 import { DateDirective } from './date.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { LikesComponent } from './likes/likes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DateCountPipe } from './date-count.pipe';
     HighlightDirective,
     VoteDirective,
     DateDirective,
-    DateCountPipe
+    DateCountPipe,
+    LikesComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,30 @@ export class QuoteComponent implements OnInit {
     new Quote(5, 'It is what it is', 0, 0, 'Nairobian Slogan',new Date(2022,1,1))
   ]
 
+  deleteQuote(isRead: any, index: number){
+    if (isRead) {
+      let toDelete = confirm(`Will you delete this quote by ${this.quotes[index].author} ?`)
+    }
+    if (isRead) {
+      this.quotes.splice(index,1)
+    }
+  }
+
+  preNum!:number
+  lastNum!:number
+  counter!:number
+
+  highestVote(){
+    this.preNum = 0
+    this.lastNum = 0
+
+    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+      this.lastNum = this.quotes[this.counter].upvote;
+      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+    return  this.preNum
+  }
+
   arr: number[] = this.quotes.map((quote) => quote.upvote)
   highest = Math.max(...this.arr)
 
