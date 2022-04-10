@@ -5,13 +5,11 @@
                 <li appHighlight>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span
                         class="text-warning">{{quote.downvote}}</span></li>
                 <li>{{quote.author}}</li>
-                <li>{{quote.name}}</li>
             </ng-template>
             <ng-template #empty>
                 <li>{{quote.quote}} <span class="text-primary">{{quote.upvote}}</span> <span
                         class="text-warning">{{quote.downvote}}</span></li>
                 <li>{{quote.author}}</li>
-                <li>{{quote.name}}</li>
             </ng-template>
     
         <app-quote-detail [quote]='quote'></app-quote-detail>
