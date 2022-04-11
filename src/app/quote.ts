@@ -4,15 +4,17 @@ export class Quote {
     upvote: number
     downvote:number
     author:string
-    newDate: Date
+    name:string
+    dateCreated: Date
 
-    constructor(id:number, quote:string, upvote:number, downvote:number, author:string, newDate:Date){
+    constructor(id:number, quote:string, upvote:number, downvote:number, author:string, name:string, dateCreated:Date){
         this.id = id;
         this.quote = quote;
         this.upvote= upvote;
         this.downvote = downvote;
         this.author = author;
-        this.newDate = newDate;
+        this.name = name;
+        this.dateCreated = dateCreated;
         
           
     }
