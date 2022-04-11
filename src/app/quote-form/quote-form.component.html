@@ -1,0 +1,42 @@
+<h2 class="text-center">Add Quote</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <form action="#" #quoteForm="ngForm">
+
+                <div class="form-group">
+                    <label for="author-name">Author Name</label>
+                    <input type="text" required class="form-control" id="author-name" [(ngModel)]="newQuote.author" name="author-name" #name="ngModel">
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                        <p>Please input the author's name!</p>
+                    </div>
+                   
+                </div>
+
+                <div class="form=group mt-4">
+                    <label for="quote">Type quote</label>
+                    <textarea id="description" rows="3" class="form-control" required [(ngModel)]="newQuote.quote" #quote="ngModel" name="quote"></textarea>
+                    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                        <p>Please input quote!</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel">
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                        <p>Please input your name!</p>
+                    </div>
+                    
+                </div>
+
+                
+                <button type="submit" class="btn btn-warning mt-4 float-end"><strong>Add Quote</strong>&nbsp;
+                    <span class="spinner-grow spinner-grow-sm spinner-grow-success"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    
+</div>
