@@ -16,7 +16,7 @@
  - Deploy your final outcome of your project, when you feel satisfied with your results.
 
 # Live link.
-
+  - https://kim-olanga.github.io/Quotes/
 
 # Copyright and Licence information.
 - MIT LICENCE
